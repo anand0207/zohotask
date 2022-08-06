@@ -1,0 +1,27 @@
+.home{
+    margin:50px 0px;
+}
+.filters_set{
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+}
+.filter_row{
+    background: #9F2B68;
+    padding: 10px 0px;
+    margin-bottom: 15px;
+    color: #fff;
+}
+#date_filter{
+    padding: 7px 20px;
+    border-radius: 5px;
+    border: 0px;
+    outline: 0;
+    font-family: 'Poppins', sans-serif;
+}
+#clear_button button{
+    padding: 5px 20px;
+    background: #fff;
+    color: #000;
+    font-family: 'Poppins', sans-serif;
+}

@@ -1,0 +1,46 @@
+ 
+.card_set {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.card_set h6{
+    margin:0px
+}
+.top_card{
+    color: #fff;
+    transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    border-radius: 4px;
+    box-shadow: rgb(0 0 0 / 20%) 0px 2px 1px -1px, rgb(0 0 0 / 14%) 0px 1px 1px 0px, rgb(0 0 0 / 12%) 0px 1px 3px 0px;
+    background: #9f2b68;
+    padding: 15px;
+    max-width: 30%;
+    margin: 0 auto 15px;
+}
+.cardDetails{
+    text-align: center;
+    margin-top: 15px;
+}
+.form-select{
+    width: 170px;
+    height: 35px;
+    /* background: #ddd; */
+}
+ .slick-next{
+    right:0px;
+}
+.slick-prev{
+    z-index: 999;
+    left: 0px;
+}
+#align_button{
+    float: left;
+    width: 100%;
+    text-align: center;
+    padding-top: 10px;
+}
+#align_button button{
+    background: #fff;
+    color: #000;
+    font-family: 'Poppins', sans-serif;
+}

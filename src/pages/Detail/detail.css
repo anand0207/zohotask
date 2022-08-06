@@ -1,0 +1,19 @@
+.d_page {
+    margin-top: 50px;
+}
+
+.thead-dark{
+    background-color: #9F2B68;
+    border-color: #9F2B68;
+    color: #fff;
+}
+table tr{
+    vertical-align: middle;
+    text-align: center;
+}
+.d_date{
+    width: 215px;
+    background: #9F2B68;
+    padding: 9px;
+    float: right;
+}
