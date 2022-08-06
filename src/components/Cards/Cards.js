@@ -44,7 +44,6 @@ const CardsComponent = (props) => {
     return (
         <div className="col-lg-4 top_card">
             <div className="card_set">
-                   {console.log(props.data)}
                 <h6>{props.state}</h6>
                 {dList()}
 

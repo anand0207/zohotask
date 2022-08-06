@@ -255,9 +255,13 @@ const HomePage = () => {
         setSearchInput('')
         setdateInput('')
         setsortby('')
-        setcovidbasicData([])
-        rawdata.map((value) =>{
-            setcovidbasicData(covidbasicData => [...covidbasicData , value ])
+        getdatabydate().then((result) => {
+            setcovidbasicData([])
+            Object.entries(result.data).map(([key, value], index) => {
+                const newKey = states[key] || key;
+                var newobj = Object.assign(initcovidbasicData[index][newKey], { bydate: value.dates });
+                setcovidbasicData(covidbasicData => [...covidbasicData, { [newKey]: newobj }])
+            });
         })
     }
 
@@ -306,7 +310,8 @@ const HomePage = () => {
                     </> : dateInput.length > 1 ? <>
                         {covidbasicData.length > 0 ? covidbasicData.map((value) => (
                             Object.entries(value).map(([key, value], index) => (
-                                <CardsComponent state={key} data={value.bydate[dateInput] !=undefined ? value.bydate[dateInput] : undefined} dateInput={dateInput !=undefined ? dateInput:null} />
+                              //<>{value.bydate[dateInput] !=undefined ? <CardsComponent state={key} data={value.bydate[dateInput] !=undefined ? value.bydate[dateInput]: null} dateInput={dateInput} /> : <NoResults/> }</>   
+                            <CardsComponent state={key} data={value.bydate[dateInput]} dateInput={dateInput} />
                             ))
                         )) : <NoResults />}
                     </> : <>
